@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+ 
+{% load static %}
+ 
+{% block javascript %}
+
+{% endblock %}
+ 
+{% block content %}
+  <h1 class="page-header">Account</h1>
+  <p>
+    <button type="button" class="btn btn-primary js-create-product" data-url="{% url 'product_create' %}">
+      <span class="glyphicon glyphicon-plus"></span>
+      New Account
+    </button>
+
+    
+  </p>
+
+  
+  <div class="table-responsive">
+  <table class="table" id="product-table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Gender</th>
+        <th>DOB</th>
+        <th>Mobile</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      {% include 'partial_product_list.html' %}
+    </tbody>
+  </table>
+</div>
+
+
+  <div class="modal fade" id="modal-product">
+    <div class="modal-dialog">
+      <div class="modal-content">
+ 
+      </div>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,1 @@
+SELECT * FROM customerproject_db.customer_product;
